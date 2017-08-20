@@ -16,4 +16,4 @@ ADD glagol-server /usr/bin/glagol-server
 RUN chmod +x /usr/bin/glagol-server
 
 ENTRYPOINT ["glagol-server"]
-CMD ["glagol-server", "daemon"]
+CMD ["daemon"]
