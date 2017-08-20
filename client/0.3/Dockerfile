@@ -15,4 +15,7 @@ ADD glagol-client /usr/bin/glagol-client
 
 RUN chmod +x /usr/bin/glagol-client
 
+RUN mkdir /app
+WORKDIR /app
+
 ENTRYPOINT glagol-client
