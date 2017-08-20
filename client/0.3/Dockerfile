@@ -18,4 +18,4 @@ RUN chmod +x /usr/bin/glagol-client
 RUN mkdir /app
 WORKDIR /app
 
-ENTRYPOINT glagol-client
+ENTRYPOINT ["glagol-client"]
