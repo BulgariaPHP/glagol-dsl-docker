@@ -5,10 +5,10 @@ MAINTAINER Yoan-Alexander Grigorov <joan.grigorov@gmail.com>
 RUN mkdir /usr/local/src \
     && apk --update add --virtual build-dependencies wget openssl
 
-ENV VERSION "0.3.2"
+ENV VERSION "0.3.3"
 
 RUN wget -O /usr/local/src/glagol-dsl-server.jar \
-    "https://github.com/BulgariaPHP/glagol-dsl/releases/download/${VERSION}/glagol-dsl.jar" \
+    "https://github.com/BulgariaPHP/glagol-dsl/releases/download/${VERSION}/glagol-dsl-server-${VERSION}.jar" \
     && apk del build-dependencies
 
 ADD glagol-server /usr/bin/glagol-server
