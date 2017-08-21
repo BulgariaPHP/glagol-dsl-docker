@@ -2,7 +2,7 @@ FROM openjdk:8-jdk-alpine
 
 MAINTAINER Yoan-Alexander Grigorov <joan.grigorov@gmail.com>
 
-ENV VERSION "v0.3.0"
+ENV VERSION "v0.3.1"
 
 RUN mkdir /usr/local/src
 
