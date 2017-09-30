@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 for file in "$@"
 do
     path=$(dirname ${file})
