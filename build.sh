@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 for file in "$@"
 do
     path=$(dirname ${file})
-    dir=${dir:2:${#path}}
+    dir=${path:2:${#path}}
     tag=${dir//\//-}
 
     docker build -t glagol/php:${tag} ${path}
