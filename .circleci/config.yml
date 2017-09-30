@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: ls
       - run:
           name: Publishing Docker Hub images
-          command: find . -name Dockerfile -exec ./build.sh {} \+
+          command: find . -name Dockerfile -exec ~/repo/build.sh {} \+
