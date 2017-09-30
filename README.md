@@ -1,2 +1,2 @@
-# Glagol DSL Dockerfiles
-This repository hosts Docker Hub hosted images for Glagol DSL client and server applications
+# Glagol DSL PHP Docker images
+This repository hosts preconfigure PHP Docker images for Glagol DSL compiled projects

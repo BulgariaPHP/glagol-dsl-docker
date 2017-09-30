@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker:stable
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - apk add bash
+      - setup_remote_docker
+      - run:
+          name: Publishing Docker Hub images
+          command: find . -name Dockerfile -exec ./build.sh {} \+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: v1-dependencies-{{ checksum "pom.xml" }}
