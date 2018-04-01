@@ -6,8 +6,6 @@ RUN apt-get update -y \
     && apt-get install -y \
         $PHPIZE_DEPS \
         zlib1g-dev \
-    && pecl install xdebug \
-    && docker-php-ext-enable xdebug \
     && docker-php-ext-install pdo pdo_mysql mbstring zip \
     && pecl install ds \
     && docker-php-ext-enable ds \
@@ -26,6 +24,5 @@ RUN apt-get update -y \
 
 COPY init.sh /usr/local/bin/app-startup
 COPY virtual_host.conf /etc/apache2/sites-available/000-default.conf
-COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 CMD ["app-startup"]
