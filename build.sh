@@ -1,5 +1,6 @@
 #!/bin/sh
-for file in "$@"
+IMAGES="$(find . -name Dockerfile | sort)"
+for file in $IMAGES
 do
     path=$(dirname ${file})
     dir=${path:2:${#path}}
